@@ -1,0 +1,2 @@
+module WeaponInfosHelper
+end

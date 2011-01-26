@@ -1,0 +1,12 @@
+<h1>Editing weapon_info</h1>
+
+<% form_for(@weapon_info) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @weapon_info %> |
+<%= link_to 'Back', weapon_infos_path %>

@@ -1,0 +1,16 @@
+<h1>Editing knife</h1>
+
+<% form_for(@knife) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :length %><br />
+    <%= f.text_field :length %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @knife %> |
+<%= link_to 'Back', knives_path %>

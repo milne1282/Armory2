@@ -1,0 +1,15 @@
+<h1>New knife</h1>
+
+<% form_for(@knife) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :length %><br />
+    <%= f.text_field :length %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', knives_path %>

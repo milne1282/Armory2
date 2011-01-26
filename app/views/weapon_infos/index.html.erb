@@ -1,0 +1,18 @@
+<h1>Listing weapon_infos</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @weapon_infos.each do |weapon_info| %>
+  <tr>
+    <td><%= link_to 'Show', weapon_info %></td>
+    <td><%= link_to 'Edit', edit_weapon_info_path(weapon_info) %></td>
+    <td><%= link_to 'Destroy', weapon_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New weapon_info', new_weapon_info_path %>

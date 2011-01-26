@@ -1,0 +1,2 @@
+module KnivesHelper
+end

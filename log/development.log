@@ -1,0 +1,40 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (121.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (152.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateFirearms (20110126024558)
+  [4;35;1mSQL (119.1ms)[0m   [0mCREATE TABLE `firearms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `caliber` varchar(255), `times_fired` int(11), `last_clean_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110126024558')[0m
+Migrating to CreateKnives (20110126024637)
+  [4;35;1mSQL (109.5ms)[0m   [0mCREATE TABLE `knives` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `length` decimal, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110126024637')[0m
+Migrating to CreateProductInformations (20110126024736)
+  [4;35;1mSQL (108.7ms)[0m   [0mCREATE TABLE `product_informations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `brand` varchar(255), `model` varchar(255), `serial_number` varchar(255), `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110126024736')[0m
+Migrating to CreatePurchaseInformations (20110126024824)
+  [4;35;1mSQL (157.0ms)[0m   [0mCREATE TABLE `purchase_informations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date_of_purchase` date, `price` decimal, `vendor` varchar(255), `purchase_id` int(11), `purchase_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110126024824')[0m
+Migrating to CreateWeaponInfos (20110126025331)
+  [4;35;1mSQL (108.3ms)[0m   [0mCREATE TABLE `weapon_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `weapon_id` int(11), `weapon_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110126025331')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `firearms`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `firearms`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `knives`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `knives`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `knives`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `product_informations`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `product_informations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `product_informations`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `purchase_informations`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `purchase_informations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `purchase_informations`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `weapon_infos`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `weapon_infos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `weapon_infos`[0m
