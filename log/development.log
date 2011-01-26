@@ -38,3 +38,461 @@ Migrating to CreateWeaponInfos (20110126025331)
   [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `weapon_infos`[0m
   [4;35;1mSQL (1.3ms)[0m   [0mdescribe `weapon_infos`[0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `weapon_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#index (for 127.0.0.1 at 2011-01-25 22:20:19) [GET]
+  [4;36;1mFirearm Load (0.3ms)[0m   [0;1mSELECT * FROM `firearms` [0m
+Rendering template within layouts/firearms
+Rendering firearms/index
+Completed in 51ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/firearms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:20:24) [GET]
+  [4;35;1mFirearm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+Completed in 173ms (View: 168, DB: 1) | 200 OK [http://0.0.0.0/firearms/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#create (for 127.0.0.1 at 2011-01-25 22:20:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"VFTEfBuleK0E5oiAEHEFk0n/MKS5D09RJnueeMHMaA8=", "firearm"=>{"times_fired"=>"2000", "last_clean_date(1i)"=>"2011", "last_clean_date(2i)"=>"1", "last_clean_date(3i)"=>"26", "caliber"=>"9mm"}}
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFirearm Create (0.2ms)[0m   [0;1mINSERT INTO `firearms` (`times_fired`, `created_at`, `updated_at`, `last_clean_date`, `caliber`) VALUES(2000, '2011-01-26 03:20:35', '2011-01-26 03:20:35', '2011-01-26', '9mm')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/firearms/1
+Completed in 11ms (DB: 2) | 302 Found [http://0.0.0.0/firearms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#show (for 127.0.0.1 at 2011-01-25 22:20:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+  [4;35;1mFirearm Load (0.7ms)[0m   [0mSELECT * FROM `firearms` WHERE (`firearms`.`id` = 1) [0m
+Rendering template within layouts/firearms
+Rendering firearms/show
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://0.0.0.0/firearms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#index (for 127.0.0.1 at 2011-01-25 22:20:39) [GET]
+  [4;36;1mFirearm Load (0.3ms)[0m   [0;1mSELECT * FROM `firearms` [0m
+Rendering template within layouts/firearms
+Rendering firearms/index
+  [4;35;1mFirearm Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://0.0.0.0/firearms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#index (for 127.0.0.1 at 2011-01-25 22:30:26) [GET]
+  [4;36;1mFirearm Load (0.3ms)[0m   [0;1mSELECT * FROM `firearms` [0m
+Rendering template within layouts/firearms
+Rendering firearms/index
+  [4;35;1mFirearm Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://0.0.0.0/firearms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:30:27) [GET]
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+
+ActionView::TemplateError (undefined local variable or method `customer_form' for #<ActionView::Base:0x101181f80>) on line #24 of app/views/firearms/new.html.erb:
+21:   <% f.fields_for :weapon do |weapon_form| %>
+22:     <p>
+23:       <div>
+24: 		  <% customer_form.fields_for :product_information do |product_information_form| %>
+25: 		    <p>
+26: 		      <div>
+27: 				<p>
+
+    app/views/firearms/new.html.erb:24
+    app/views/firearms/new.html.erb:21
+    app/views/firearms/new.html.erb:3
+    app/controllers/firearms_controller.rb:29:in `new'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:30:54) [GET]
+  [4;35;1mFirearm Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.new_record?) on line #43 of app/views/firearms/new.html.erb:
+40: 
+41: 		  <!-- The allow_destroy option in the model enables deletion of
+42: 		   child records. -->
+43: 		      <% unless product_information_form.object.new_record? %>
+44: 		        <div>
+45: 		          <%= product_information_form.label :_delete, 'Remove:' %>
+46: 		          <%= product_information_form.check_box :_delete %>
+
+    app/views/firearms/new.html.erb:43
+    app/views/firearms/new.html.erb:24
+    app/views/firearms/new.html.erb:21
+    app/views/firearms/new.html.erb:3
+    app/controllers/firearms_controller.rb:29:in `new'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:31:48) [GET]
+  [4;36;1mFirearm Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.new_record?) on line #43 of app/views/firearms/new.html.erb:
+40: 
+41: 		  <!-- The allow_destroy option in the model enables deletion of
+42: 		   child records. -->
+43: 		      <% unless product_information_form.object.new_record? %>
+44: 		        <div>
+45: 		          <%= product_information_form.label :_delete, 'Remove:' %>
+46: 		          <%= product_information_form.check_box :_delete %>
+
+    app/views/firearms/new.html.erb:43
+    app/views/firearms/new.html.erb:24
+    app/views/firearms/new.html.erb:21
+    app/views/firearms/new.html.erb:3
+    app/controllers/firearms_controller.rb:29:in `new'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:31:50) [GET]
+  [4;35;1mFirearm Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.new_record?) on line #43 of app/views/firearms/new.html.erb:
+40: 
+41: 		  <!-- The allow_destroy option in the model enables deletion of
+42: 		   child records. -->
+43: 		      <% unless product_information_form.object.new_record? %>
+44: 		        <div>
+45: 		          <%= product_information_form.label :_delete, 'Remove:' %>
+46: 		          <%= product_information_form.check_box :_delete %>
+
+    app/views/firearms/new.html.erb:43
+    app/views/firearms/new.html.erb:24
+    app/views/firearms/new.html.erb:21
+    app/views/firearms/new.html.erb:3
+    app/controllers/firearms_controller.rb:29:in `new'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:31:52) [GET]
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.new_record?) on line #43 of app/views/firearms/new.html.erb:
+40: 
+41: 		  <!-- The allow_destroy option in the model enables deletion of
+42: 		   child records. -->
+43: 		      <% unless product_information_form.object.new_record? %>
+44: 		        <div>
+45: 		          <%= product_information_form.label :_delete, 'Remove:' %>
+46: 		          <%= product_information_form.check_box :_delete %>
+
+    app/views/firearms/new.html.erb:43
+    app/views/firearms/new.html.erb:24
+    app/views/firearms/new.html.erb:21
+    app/views/firearms/new.html.erb:3
+    app/controllers/firearms_controller.rb:29:in `new'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:32:10) [GET]
+  [4;35;1mFirearm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.new_record?) on line #43 of app/views/firearms/new.html.erb:
+40: 
+41: 		  <!-- The allow_destroy option in the model enables deletion of
+42: 		   child records. -->
+43: 		      <% unless product_information_form.object.new_record? %>
+44: 		        <div>
+45: 		          <%= product_information_form.label :_delete, 'Remove:' %>
+46: 		          <%= product_information_form.check_box :_delete %>
+
+    app/views/firearms/new.html.erb:43
+    app/views/firearms/new.html.erb:24
+    app/views/firearms/new.html.erb:21
+    app/views/firearms/new.html.erb:3
+    app/controllers/firearms_controller.rb:29:in `new'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (98.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:32:16) [GET]
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.new_record?) on line #43 of app/views/firearms/new.html.erb:
+40: 
+41: 		  <!-- The allow_destroy option in the model enables deletion of
+42: 		   child records. -->
+43: 		      <% unless product_information_form.object.new_record? %>
+44: 		        <div>
+45: 		          <%= product_information_form.label :_delete, 'Remove:' %>
+46: 		          <%= product_information_form.check_box :_delete %>
+
+    app/views/firearms/new.html.erb:43
+    app/views/firearms/new.html.erb:24
+    app/views/firearms/new.html.erb:21
+    app/views/firearms/new.html.erb:3
+    app/controllers/firearms_controller.rb:29:in `new'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:33:29) [GET]
+  [4;36;1mFirearm Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:37:07) [GET]
+
+ArgumentError (No association found for name `weapon'. Has it been defined yet?):
+  app/models/firearm.rb:4
+  app/controllers/firearms_controller.rb:27:in `new'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:44:19) [GET]
+
+ArgumentError (Unknown key(s): autosave):
+  app/models/firearm.rb:4
+  app/controllers/firearms_controller.rb:27:in `new'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/scottmilne/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.2ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:45:36) [GET]
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+Completed in 3823ms (View: 3813, DB: 1) | 200 OK [http://0.0.0.0/firearms/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:46:02) [GET]
+  [4;35;1mFirearm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+  [4;36;1mWeaponInfo Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `weapon_infos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:57:09) [GET]
+  [4;36;1mFirearm Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+  [4;35;1mWeaponInfo Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `weapon_infos`[0m
+  [4;36;1mProductInformation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `product_informations`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+Completed in 5237ms (View: 5177, DB: 4) | 200 OK [http://0.0.0.0/firearms/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:59:07) [GET]
+  [4;35;1mFirearm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firearms`[0m
+  [4;36;1mWeaponInfo Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `weapon_infos`[0m
+  [4;35;1mProductInformation Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `product_informations`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+Completed in 33ms (View: 19, DB: 4) | 200 OK [http://0.0.0.0/firearms/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 22:59:35) [GET]
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+  [4;35;1mWeaponInfo Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `weapon_infos`[0m
+  [4;36;1mProductInformation Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `product_informations`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+Completed in 36ms (View: 21, DB: 3) | 200 OK [http://0.0.0.0/firearms/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirearmsController#new (for 127.0.0.1 at 2011-01-25 23:02:44) [GET]
+  [4;36;1mFirearm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firearms`[0m
+  [4;35;1mWeaponInfo Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `weapon_infos`[0m
+  [4;36;1mProductInformation Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `product_informations`[0m
+  [4;35;1mPurchaseInformation Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `purchase_informations`[0m
+Rendering template within layouts/firearms
+Rendering firearms/new
+Completed in 152ms (View: 117, DB: 5) | 200 OK [http://0.0.0.0/firearms/new]

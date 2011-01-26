@@ -25,6 +25,10 @@ class FirearmsController < ApplicationController
   # GET /firearms/new.xml
   def new
     @firearm = Firearm.new
+    @firearm.weapon_info = WeaponInfo.new
+    @firearm.weapon_info.product_information = ProductInformation.new
+    @firearm.weapon_info.purchase_information = PurchaseInformation.new
+
 
     respond_to do |format|
       format.html # new.html.erb

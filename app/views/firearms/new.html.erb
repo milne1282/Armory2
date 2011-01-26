@@ -15,6 +15,82 @@
     <%= f.label :last_clean_date %><br />
     <%= f.date_select :last_clean_date %>
   </p>
+
+
+  <% f.fields_for :weapon_info do |weapon_info_form| %>
+    <p>
+	  <h2>Weapon Information</h2>
+      <div>
+		  <% weapon_info_form.fields_for :product_information do |product_information_form| %>
+		    <p>
+			  <h3>Product Information</h3>
+		      <div>
+				<p>
+		          <%= product_information_form.label :brand, 'Brand:' %>
+		          <%= product_information_form.text_field :brand %>
+				</p>
+				<p>
+		          <%= product_information_form.label :model, 'Model:' %>
+		          <%= product_information_form.text_field :model %>
+				</p>
+				<p>
+		          <%= product_information_form.label :serial_number, 'Serial Number:' %>
+		          <%= product_information_form.text_field :serial_number %>
+				</p>
+		      </div>
+
+		  <!-- The allow_destroy option in the model enables deletion of
+		   child records. -->
+		      <% unless product_information_form.object.new_record? %>
+		        <div>
+		          <%= product_information_form.label :_delete, 'Remove:' %>
+		          <%= product_information_form.check_box :_delete %>
+		        </div>
+		      <% end %>
+		    </p>
+		  <% end %>
+      </div>
+      <div>
+		  <% weapon_info_form.fields_for :purchase_information do |purchase_information_form| %>
+		    <p>
+			  <h3>Purchase Information</h3>
+		      <div>
+				<p>
+		          <%= purchase_information_form.label :date_of_purchase, 'Date of Purchase:' %>
+		          <%= purchase_information_form.text_field :date_of_purchase %>
+				</p>
+				<p>
+		          <%= purchase_information_form.label :price, 'Price:' %>
+		          <%= purchase_information_form.text_field :price %>
+				</p>
+				<p>
+		          <%= purchase_information_form.label :vendor, 'Vendor:' %>
+		          <%= purchase_information_form.text_field :vendor %>
+				</p>
+		      </div>
+
+		  <!-- The allow_destroy option in the model enables deletion of
+		   child records. -->
+		      <% unless purchase_information_form.object.new_record? %>
+		        <div>
+		          <%= purchase_information_form.label :_delete, 'Remove:' %>
+		          <%= purchase_information_form.check_box :_delete %>
+		        </div>
+		      <% end %>
+		    </p>
+		  <% end %>
+      </div>
+  <!-- The allow_destroy option in the model enables deletion of
+   child records. -->
+      <% unless weapon_info_form.object.new_record? %>
+        <div>
+          <%= weapon_info_form.label :_delete, 'Remove:' %>
+          <%= weapon_info_form.check_box :_delete %>
+        </div>
+      <% end %>
+    </p>
+  <% end %>
+
   <p>
     <%= f.submit 'Create' %>
   </p>
